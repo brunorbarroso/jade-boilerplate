@@ -4,43 +4,25 @@ block config
 
 doctype
 html(lang="pt-BR")
-head
-    //pagetitle
-    title
-        block PageTitle
-            | #{PageTitle} | #{PageSubTitle}
+    head
+        include ../partials/head.jade
 
-    block MetaTags
-        //metatags
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    //stylesheet
-    link(rel="stylesheet", href="css/style.css", type='text/css')
+    body
+        //header
+        include ../partials/header.jade
+        //end header
 
-body
+        //main
+        main
+            block MainContent
+        //end main
 
-    //header
-    header
-        //navigation
-        nav.nav
-            .nav__link
-        //end navigation
-    //end header
-
-    //main
-    main
-        block MainContent
-
-    //end main
-
-    block Sidebar
         //aside
         aside
-            h2 Aside
+            block Aside
         //end aside
 
-    //footer
-    footer
-        block Footer
-        //- Content Here
-    //end footer
+        //footer
+        footer
+            include ../partials/footer.jade
+        //end footer
