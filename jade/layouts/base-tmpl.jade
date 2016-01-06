@@ -1,0 +1,43 @@
+block config
+    //- config.jade
+    include ../config
+
+doctype
+html(lang="pt-BR")
+head
+    //pagetitle
+    title
+        block PageTitle
+            | #{PageTitle} | #{PageSubTitle}
+
+    block MetaTags
+        //metatags
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //stylesheet
+    link(rel="stylesheet", href="css/style.css", type='text/css')
+
+body
+
+    //header
+    header
+        //navigation
+        nav.nav
+            .nav__link
+        //end navigation
+
+        block HeaderText
+            p Default Header
+    //end header
+
+    //main
+    main
+        block MainContent
+
+    //end main
+
+    //footer
+    footer
+        block Footer
+        //- Content Here
+    //end footer
