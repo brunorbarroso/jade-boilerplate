@@ -1,0 +1,22 @@
+{
+    "name": "jade-boilerplate",
+    "version": "1.0.0",
+    "description": "Jade Boilerplate é um modelo front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gabrielmelo/jade-boilerplate.git"
+    },
+    "keywords": [
+    ],
+    "author": "Gabriel Melo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gabrielmelo/jade-boilerplate.git"
+    },
+    "devDependencies": {
+    }
+}
