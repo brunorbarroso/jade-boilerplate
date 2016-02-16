@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "jade-boilerplate",
   "description": "Jade Boilerplate é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+=======
+  "name": "",
+  "description": "",
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
   "main": "Gruntfile.js",
   "authors": [
     "Gabriel Melo"
@@ -18,5 +23,12 @@
     "bower_components",
     "test",
     "tests"
+<<<<<<< HEAD
   ]
+=======
+  ],
+  "dependencies": {
+    "",
+  }
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
 }

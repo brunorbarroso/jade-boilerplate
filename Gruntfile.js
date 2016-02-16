@@ -12,13 +12,21 @@ module.exports = function(grunt) {
      * Gera a string com os autores do projeto
      * ------------------------------------------------------
      */
+<<<<<<< HEAD
     var authors   = "";
+=======
+    var authors   = "Gabriel Melo";
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
 
     for( i in packageFile.authors ){
         if( authors == "" ){
             authors = packageFile.authors[i];
         }else{
+<<<<<<< HEAD
             authors = authors+"\n\t "+packageFile.authors[i];
+=======
+            authors = authors+"\n\t  "+packageFile.authors[i];
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
         }
     }
     /*
@@ -29,7 +37,11 @@ module.exports = function(grunt) {
     var hr = '----------------------------------------------------\n';
     var bannerFiles = '/*\n' +
         hr+
+<<<<<<< HEAD
         'Jade Boilerplate\n' +
+=======
+        'Gabriel Melo\n' +
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
         hr+
         'projeto\t: <%= pkg.name %>\n' +
         'versao\t: <%= pkg.version %>\n' +
@@ -49,17 +61,24 @@ module.exports = function(grunt) {
                 livereload: true
             },
 
+<<<<<<< HEAD
             sass: {
                 files: ['**/*.scss','**/*.sass'],
                 tasks: ['sass:build'],
             },
             jade: {
                 files: ['**/*.jade'],
+=======
+            // jade
+            jade: {
+                files: ['**/*.jade', '**/*.md'],
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
                 tasks: ['jade']
             }
 
         },
 
+<<<<<<< HEAD
         //  sass
         sass: {
             build: {
@@ -94,17 +113,32 @@ module.exports = function(grunt) {
 
                 files: {
                     'dist/assets/css/main.min.css': 'dist/assets/css/main.css',
+=======
+        // connect
+        connect: {
+            build: {
+                options: {
+                    port: 9000,
+                    base: 'html/',
+                    open: true,
+                    livereload: true,
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
                 }
             }
         },
 
         // jade
         jade: {
+<<<<<<< HEAD
             build: {
+=======
+            compile: {
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
                 options: {
                     client: false,
                     pretty: true
                 },
+<<<<<<< HEAD
 
                 files: [{
                     expand: true,
@@ -151,10 +185,24 @@ module.exports = function(grunt) {
                     keepalive: true
                 }
             }
+=======
+                files: [{
+                    expand: true,
+                    cwd: 'jadefiles/pages/',
+                    src: [ '**/*.jade' ],
+                    dest: 'html/',
+                    ext: '.html'
+                }]
+            }
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
         }
     });
 
     // Tarefa(s) padrão
+<<<<<<< HEAD
     grunt.registerTask('build', ['sass:build', 'jade:build', 'connect:build', 'watch']);
     grunt.registerTask('dist', ['sass:dist', 'cssmin:dist', 'connect:dist', 'watch']);
+=======
+    grunt.registerTask('build', ['connect:build','jade','watch']);
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
 };

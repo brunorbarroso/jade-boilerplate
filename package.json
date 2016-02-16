@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "jade-boilerplate",
   "version": "1.0.0",
   "description": "Jade skeleton é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
@@ -29,4 +30,34 @@
     "load-grunt-tasks": "^3.2.0",
     "time-grunt": "^1.2.1"
   }
+=======
+    "name": "jade-boilerplate",
+    "version": "1.0.0",
+    "description": "Jade Boilerplate é um modelo front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gabrielmelo/jade-boilerplate.git"
+    },
+    "keywords": [
+    ],
+    "author": "Gabriel Melo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gabrielmelo/jade-boilerplate.git"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-banner": "^0.6.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "connect-livereload": "^0.5.3",
+        "grunt-contrib-connect": "^0.10.1",
+        "grunt-contrib-jade": "^0.14.1",
+        "load-grunt-tasks": "^3.2.0",
+        "time-grunt": "^1.2.1"
+    }
+>>>>>>> a40f09c780399be11cba59a68d25e3dabc174049
 }
