@@ -49,6 +49,12 @@ module.exports = function(grunt) {
                 livereload: true
             },
 
+            // jade
+            jade: {
+                files: ['**/*.jade', '**/*.md'],
+                tasks: ['jade']
+            }
+
         },
 
         // connect
@@ -56,15 +62,31 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     port: 9000,
-                    base: '',
+                    base: 'html/',
                     open: true,
                     livereload: true,
                 }
-            },
+            }
+        },
+
+        // jade
+        jade: {
+            compile: {
+                options: {
+                    client: false,
+                    pretty: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'jadefiles/pages/',
+                    src: [ '**/*.jade' ],
+                    dest: 'html/',
+                    ext: '.html'
+                }]
+            }
         }
     });
 
     // Tarefa(s) padrão
-    grunt.registerTask('build', ['sass','connect:build','watch']);
-    grunt.registerTask('dist'  , ['sass','cssmin','connect:build']);
+    grunt.registerTask('build', ['connect:build','jade','watch']);
 };
