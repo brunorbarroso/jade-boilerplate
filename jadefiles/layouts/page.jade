@@ -1,23 +1,9 @@
-block config
-    //- config.jade
-    include ../config
+extends ../layouts/base-tmpl.jade
 
-doctype
-html(lang="pt-BR")
-    head
-        include ../partials/head.jade
+block MainContent
 
-    body
-        //header
-        include ../partials/header.jade
-        //end header
+block Sidebar
+    aside
+        h1 Sidebar
 
-        //main
-        main
-            block Main
-        //end main
-
-        //footer
-        footer
-            include ../partials/footer.jade
-        //end footer
+block Footer
