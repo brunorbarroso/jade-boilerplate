@@ -1,0 +1,29 @@
+{
+  "name": "blue",
+  "description": "Blue é um Stylesheet framework criado pela Blue House Code & Design",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Anderson Andrade",
+    "Gabriel Melo"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Framework",
+    "Stylesheet",
+    "CSS"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "",
+  }
+}

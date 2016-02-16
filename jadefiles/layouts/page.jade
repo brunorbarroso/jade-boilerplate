@@ -1,0 +1,23 @@
+block config
+    //- config.jade
+    include ../config
+
+doctype
+html(lang="pt-BR")
+    head
+        include ../partials/head.jade
+
+    body
+        //header
+        include ../partials/header.jade
+        //end header
+
+        //main
+        main
+            block Main
+        //end main
+
+        //footer
+        footer
+            include ../partials/footer.jade
+        //end footer
