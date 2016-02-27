@@ -1,0 +1,12 @@
+//- standard component
+mixin commponents(Title, ImgSrc, ImgAlt)
+    .commponents
+        .commponents__header
+            img.image.image--medium(src="#{ImgSrc}", alt="#{imgDesc}", title="#{imgDesc}")
+            
+        .commponents__content
+            h1.title #{Title}
+
+        .commponents__footer
+            p.meta #{metaAuthor}
+            p.meta.meta--name #{metaDate}

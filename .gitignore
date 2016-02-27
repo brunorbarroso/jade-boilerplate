@@ -6,3 +6,6 @@ bower_components
 
 ### NPM ###
 /node_modules/
+
+### EXEMPLES HTML ###
+html/
