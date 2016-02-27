@@ -7,13 +7,8 @@ module.exports = function(grunt) {
 
     var packageFile = grunt.file.readJSON('package.json');
 
-    /*
-     * ------------------------------------------------------
-     * Gera a string com os autores do projeto
-     * ------------------------------------------------------
-     */
+    var authors   = "";
     var authors   = "Gabriel Melo";
-
     for( i in packageFile.authors ){
         if( authors == "" ){
             authors = packageFile.authors[i];
@@ -21,22 +16,6 @@ module.exports = function(grunt) {
             authors = authors+"\n\t  "+packageFile.authors[i];
         }
     }
-    /*
-     * ------------------------------------------------------
-     */
-
-    //  Banners dos arquivos
-    var hr = '----------------------------------------------------\n';
-    var bannerFiles = '/*\n' +
-        hr+
-        'Gabriel Melo\n' +
-        hr+
-        'projeto\t: <%= pkg.name %>\n' +
-        'versao\t: <%= pkg.version %>\n' +
-        'data\t: <%= grunt.template.today("dd/mm/yyyy HH:MM:ss") %>\n' +
-        'autores\t: <%= authors %>\n' +
-        hr+
-        '*/\n';
 
     //  Configurações das Tasks
     grunt.initConfig({
@@ -71,18 +50,40 @@ module.exports = function(grunt) {
 
         // jade
         jade: {
-            compile: {
+            build: {
                 options: {
                     client: false,
                     pretty: true
                 },
+
                 files: [{
                     expand: true,
-                    cwd: 'jadefiles/pages/',
+                    cwd: 'app/jadefiles/pages',
                     src: [ '**/*.jade' ],
-                    dest: 'html/',
+                    dest: 'build',
                     ext: '.html'
                 }]
+            },
+
+        // connect
+        connect: {
+            build: {
+                options: {
+                    port: 9000,
+                    base: 'build/',
+                    open: true,
+                    livereload: true,
+                }
+            },
+
+            dist: {
+                options: {
+                    port: 9001,
+                    base: 'dist/',
+                    open: true,
+                    livereload: true,
+                    keepalive: true
+                }
             }
         }
     });

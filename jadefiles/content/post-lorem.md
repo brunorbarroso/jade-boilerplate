@@ -1,2 +1,0 @@
-# Markdown
-I often like including markdown documents.
