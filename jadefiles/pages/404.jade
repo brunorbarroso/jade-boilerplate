@@ -1,10 +1,7 @@
-extends ../layouts/base-tmpl.jade
+extends ../layouts/single.jade
 
 append config
     - var PageTitle = "404"
-    - var PageSubTitle = "Skeleton Jade"
 
-
-block MainContent
-    h1
-        | #{PageTitle}
+block Main
+    h1 #{PageTitle}

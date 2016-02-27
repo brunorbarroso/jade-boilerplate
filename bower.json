@@ -1,16 +1,14 @@
 {
-  "name": "blue",
-  "description": "Blue é um Stylesheet framework criado pela Blue House Code & Design",
+  "name": "jade-boilerplate",
+  "description": "Jade Boilerplate é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+  "name": "",
+  "description": "",
   "main": "Gruntfile.js",
   "authors": [
-    "Anderson Andrade",
     "Gabriel Melo"
   ],
   "license": "ISC",
   "keywords": [
-    "Framework",
-    "Stylesheet",
-    "CSS"
   ],
   "moduleType": [
     "node"
@@ -24,6 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "",
+    ""
   }
 }
